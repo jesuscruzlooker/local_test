@@ -8,7 +8,7 @@
   - name: test
     title: test
     type: string_filter
-    default_value: "%^%market^%%"
+    default_value: "%market%"
     model:
     explore:
     field:
