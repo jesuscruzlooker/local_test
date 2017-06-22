@@ -1,7 +1,7 @@
 - dashboard: lookml_dashboard
-  title: Lookml Dashboard
+  title: Lookml Dashboard Testing
   layout: tile
-  tile_size: 100
+  tile_size: 185
 
   filters:
 
@@ -15,7 +15,7 @@
       fields: [companies.category_code, companies.blog_url, companies.description, companies.founded_date]
       sorts: [companies.blog_url desc]
       limit: 500
-      column_limit: 50
+      column_limit: 500
       show_view_names: true
       show_row_numbers: true
       truncate_column_names: false
