@@ -50,7 +50,7 @@
       type: table
       fields: [companies.category_code, companies.blog_url, companies.description, companies.founded_date]
       filters:
-        companies.category_code: "{{ _user_attributes['company_category'] }}"
+        companies.category_code: "sf_{{ _user_attributes['company_category'] }}"
       sorts: [companies.blog_url desc]
       limit: 500
       column_limit: 50
