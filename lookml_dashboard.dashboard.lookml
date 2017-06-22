@@ -1,5 +1,16 @@
 - dashboard: update dashboard
   layout: newspaper
+
+  filters:
+  - name: Description
+    title: Description
+    type: string_filter
+    default_value: "%market%"
+    model:
+    explore:
+    field:
+    listens_to_filters: []
+
   elements:
   - name: new look
     label: new look
@@ -50,12 +61,3 @@
     col:
     width:
     height:
-  filters:
-  - name: Description
-    title: Description
-    type: string_filter
-    default_value: "%market%"
-    model:
-    explore:
-    field:
-    listens_to_filters: []
