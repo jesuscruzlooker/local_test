@@ -5,6 +5,19 @@
 
   filters:
 
+  - name: test
+    title: test
+    type: string_filter
+    default_value: "%^%market^%%"
+    model:
+    explore:
+    field:
+    listens_to_filters: []
+
+
+
+
+
   elements:
 
     - name: add_a_unique_name_1498164246
