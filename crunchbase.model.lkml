@@ -9,10 +9,10 @@ include: "*.dashboard"
 explore: acquisitions {}
 
 explore: companies {
-#  access_filter: {
-#    field:  companies.category_code
-#    user_attribute: company_category
-#  }
+  access_filter: {
+    field:  companies.category_code
+    user_attribute: company_category
+  }
 }
 
 explore: companies_to_update {}
