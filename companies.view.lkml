@@ -8,7 +8,14 @@ view: companies {
 
   dimension: category_code {
     type: string
+
+    sql: CASE WHEN ${TABLE}.category_code IS NOT NULL THEN ${TABLE}.category_code Else 'test' END;;
+  }
+
+
+  dimension: product_image {
     sql: ${TABLE}.category_code ;;
+    html: <img src="https://images-na.ssl-images-amazon.com/images/I/41UwJsDNczL.jpg" /> ;;
   }
 
   dimension_group: created {
@@ -110,6 +117,25 @@ view: companies {
 
   measure: count {
     type: count
+    html:
+    <ul>
+    <li> value: {{ value | times:4.3 | minus:3.2 }} </li>
+    <li> rendered_value: {{ rendered_value }} </li>
+    <li> website: https://www.google.com/search?q={{ value }}&oq=adver&aqs=chrome.0.69i59j69i57j0l4.1102j0j8&sourceid=chrome&ie=UTF-8</li>
+    <li> link: {{ link }} </li>
+    <li> {{ _model._name }} </li>
+    </ul> ;;
     drill_fields: [name, twitter_username]
   }
+
+
+  measure: count2 {
+    type: count
+    drill_fields: [name, twitter_username]
+  }
+
+
+
+
+
 }
