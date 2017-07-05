@@ -40,3 +40,11 @@ explore: people {}
 explore: runs {}
 
 explore: tags {}
+
+explore:  totaly_code_types {
+  join: companies {
+    type:  left_outer
+    sql_on:  ${companies.category_code} = ${totaly_code_types.category_code};;
+    relationship: one_to_one
+  }
+}
