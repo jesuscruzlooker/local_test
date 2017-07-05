@@ -28,3 +28,21 @@ view: totaly_code_types {
     fields: [category_code, total_types]
   }
 }
+
+view: totaly_code_types_2 {
+  derived_table:  {
+    sql:  SELECT total_types as total_types2,
+                 companies.category_code as code_names2
+          FROM ${totaly_code_types.SQL_TABLE_NAME} as ref_pdt;;
+  }
+
+  dimension: code_types2 {
+    type: string
+    sql:  ${TABLE}.code_names2 ;;
+  }
+
+  dimension: code_names2 {
+    type: number
+    sql:  ${TABLE}.total_types2 ;;
+  }
+}
