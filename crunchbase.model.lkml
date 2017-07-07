@@ -9,7 +9,7 @@ include: "*.dashboard"
 explore: acquisitions {}
 
 explore: companies {
-    view_name: acquisitions
+    view_name: competitions
 
 #  access_filter: {
 #    field:  companies.category_code
