@@ -36,6 +36,10 @@ view: totaly_code_types_2 {
           FROM ${totaly_code_types.SQL_TABLE_NAME} as ref_pdt;;
   }
 
+  measure: count_ref_pdt {
+    type: count
+  }
+
   dimension: code_types2 {
     type: string
     sql:  ${TABLE}.code_names2 ;;

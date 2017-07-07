@@ -9,6 +9,8 @@ include: "*.dashboard"
 explore: acquisitions {}
 
 explore: companies {
+    view_name: acquisitions
+
 #  access_filter: {
 #    field:  companies.category_code
 #    user_attribute: company_category
