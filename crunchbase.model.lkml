@@ -12,7 +12,7 @@ explore: companies {
 
  access_filter: {
     field:  companies.name
-    user_attribute: name_3
+    user_attribute: new_name
   }
  access_filter: {
     field:  companies.category_code
